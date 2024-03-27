@@ -1,0 +1,32 @@
+id: tldr
+name: TL;DR
+description: Creates a condensed version of the text
+prompts:
+  - id: topic
+    name: Find topics
+    prompt: "Find topics from {{source}}. Return exactly {{num_topics}} topics. Prioritize topics related to {{priority_topic}}."
+    output: array
+    options:
+      - id: num_topics
+        name: Number of topics
+        type: number
+        value: 3
+        min: 1
+        max: 10
+        step: 1
+      - id: priority_topic
+        name: Priority topic
+        type: text
+        value: Importance
+  - id: text
+    name: Create TLDR
+    prompt: "Create a TLDR version of this text `{{source}}` focusing on {{topic}}. Keep it to {{num_sentences}} sentences."
+    output: text
+    options:
+      - id: num_sentences
+        name: Number of sentences
+        type: number
+        value: 2
+        min: 1
+        max: 10
+        step: 1
