@@ -4,7 +4,9 @@ description: Creates an article based on a longer text
 prompts:
   - id: text
     name: Create article
-    prompt: "Create an article version of this text `{{source}}`. Keep it to {{num_sentences}} sentences."
+    prompt: >
+      Create an article version of this text `{{source}}`. 
+      Keep it to {{num_sentences}} sentences.
     output: text
     options:
       - id: num_sentences

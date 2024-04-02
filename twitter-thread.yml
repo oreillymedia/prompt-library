@@ -4,7 +4,8 @@ description: Creates a twitter thread
 prompts:
   - id: topic
     name: Find topics
-    prompt: "Find topics from {{source}}. Return exactly {{num_topics}} topics."
+    prompt: >
+      Find topics from {{source}}. Return exactly {{num_topics}} topics.
     output: array
     options:
       - id: num_topics
@@ -16,7 +17,9 @@ prompts:
         step: 1
   - id: text
     name: Create Twitter thread
-    prompt: "Create a twitter thread from this text `{{source}}` focusing on {{topic}}. The thread should have {{num_tweets}} tweets and each tweet should be no longer than 255 characters."
+    prompt: >
+      Create a twitter thread from this text `{{source}}` focusing on {{topic}}. 
+      The thread should have {{num_tweets}} tweets and each tweet should be no longer than 255 characters.
     output: text
     options:
       - id: num_tweets

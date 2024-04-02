@@ -4,7 +4,9 @@ description: Creates a condensed version of the text
 prompts:
   - id: topic
     name: Find topics
-    prompt: "Find topics from {{source}}. Return exactly {{num_topics}} topics. Prioritize topics related to {{priority_topic}}."
+    prompt: >
+      Find topics from {{source}}. Return exactly {{num_topics}} topics. 
+      Prioritize topics related to {{priority_topic}}.
     output: array
     options:
       - id: num_topics
@@ -20,7 +22,9 @@ prompts:
         value: Importance
   - id: text
     name: Create TLDR
-    prompt: "Create a TLDR version of this text `{{source}}` focusing on {{topic}}. Keep it to {{num_sentences}} sentences."
+    prompt: >
+      Create a TLDR version of this text `{{source}}` focusing on {{topic}}. 
+      Keep it to {{num_sentences}} sentences.
     output: text
     options:
       - id: num_sentences
