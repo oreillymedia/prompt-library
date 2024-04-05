@@ -7,14 +7,14 @@ prompts:
     prompt: >
        You are a technical writer whose job is to write a marketing description of a technical work based on a title, a draft description, and a table of contents.  Your job is to combine all this information into an approximately markdown-formatted summary that covers the most important topics, tools, and keywords a reader would be interested in. 
 
-      The description should give a brief description of the work, have a section call "What you'll learn" that is based on the tbale of contents, and have a section called "Audience" that should identify the types of job categories (like software engineer) that would find the work appealing.  Your description should use markdown tags to denote strctures like headings, bullet points, and paragraph breaks.  DO NOT USE THE TITLE AS THE FIRST HEADER!
+       The description should give a brief description of the work, have a section call "What you'll learn" that is based on the tbale of contents, and have a section called "Audience" that should identify the types of job categories (like software engineer) that would find the work appealing.  Your description should use markdown tags to denote strctures like headings, bullet points, and paragraph breaks.  DO NOT USE THE TITLE AS THE FIRST HEADER!
+      
+       Title: {title}
 
-      Title: {title}
-
-      Current Description:
+       Current Description:
         {source}
-
-      Table of contents:
+       
+       Table of contents:
         {toc}
     output: text
     options:
