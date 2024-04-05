@@ -9,13 +9,13 @@ prompts:
 
        The description should give a brief description of the work, have a section call "What you'll learn" that is based on the tbale of contents, and have a section called "Audience" that should identify the types of job categories (like software engineer) that would find the work appealing.  Your description should use markdown tags to denote strctures like headings, bullet points, and paragraph breaks.  DO NOT USE THE TITLE AS THE FIRST HEADER!
       
-       Title: {title}
+       Title: {{title}}
 
        Current Description:
-        {source}
+        {{source}}
        
        Table of contents:
-        {toc}
+        {{toc}}
     output: text
     options:
       - id: title
